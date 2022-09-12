@@ -1,12 +1,12 @@
 package com.example.mvi
 
+// list of all views that displays for user
 sealed class MainViewState {
-    // Ideal
+
+    // ideal
     object Ideal:MainViewState()
-
-    // Number
-    data class Number(val number :Int):MainViewState()
-
-    //Error
-    data class Error(val error :String):MainViewState()
+    // number
+    data class NumberAdded(val number:Int):MainViewState()
+    // error
+    data class Error(val message:String):MainViewState()
 }
